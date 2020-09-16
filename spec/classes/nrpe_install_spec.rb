@@ -41,7 +41,6 @@ describe 'nrpe::install' do
           it { is_expected.to contain_package('nrpe').with_ensure('installed') }
         end
       end
-
     end
   end
 end

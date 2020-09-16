@@ -90,7 +90,7 @@ class nrpe::params {
           $nrpe_ssl_dir          = '/etc/nagios/nrpe-ssl'
           $nrpe_include_dir      = '/etc/nagios/nrpe.d'
           $nrpe_packages_daemon  = 'nagios-nrpe'
-          $nrpe_packages_plugins = [ 'nagios-plugins', 'nagios-plugins-nrpe' ]
+          $nrpe_packages_plugins = ['nagios-plugins', 'nagios-plugins-nrpe']
         }
         default:   {
           $nrpe_config           = '/etc/nrpe.cfg'
@@ -121,7 +121,7 @@ class nrpe::params {
   }
 
   if $nrpe_packages_daemon and $nrpe_packages_plugins {
-    $nrpe_packages = [ $nrpe_packages_daemon ] + $nrpe_packages_plugins
+    $nrpe_packages = [$nrpe_packages_daemon] + $nrpe_packages_plugins
   }
 
   $dont_blame_nrpe                 = false

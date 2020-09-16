@@ -2,7 +2,6 @@
 #
 # @api private
 class nrpe::install {
-
   if $nrpe::manage_package {
     # The classic way: install the daemon and plugins as defined by params.pp
     $packages_to_install = $nrpe::package_name
@@ -25,5 +24,4 @@ class nrpe::install {
     ensure   => installed,
     provider => $nrpe::provider,
   }
-
 }
